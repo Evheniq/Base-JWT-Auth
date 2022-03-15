@@ -63,7 +63,7 @@ class authController {
       const {email, psw} = req.body
       const checkUser = await db.execute(`SELECT * FROM usersAuth WHERE email='${email}';`)
       if (!checkUser[0].length){
-        console.log('User not found')
+        console.log('User not found!')
       }
       const user = checkUser[0][0]
 

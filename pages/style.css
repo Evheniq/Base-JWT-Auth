@@ -1,0 +1,12 @@
+.header {
+    border-bottom: 1px solid black;
+    padding: 15px -0px;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.bad-block{
+    text-align: center;
+}

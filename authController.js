@@ -77,7 +77,6 @@ class authController {
       const token = generateAccessToken(user.id, user.email, userRole.name)
       res.cookie('JWT', token)
       res.redirect('/inside/guest')
-
     } catch (e) {
       console.log(e)
     }
@@ -87,6 +86,10 @@ class authController {
     res.sendFile(__dirname + '/pages/login.html')
   }
 
+  logout(req, res) {
+    res.cookie('JWT', 'logout')
+    res.redirect('/auth/registration')
+  }
 }
 
 module.exports = new authController()
